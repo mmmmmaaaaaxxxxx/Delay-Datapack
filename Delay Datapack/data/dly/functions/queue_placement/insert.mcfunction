@@ -1,1 +1,1 @@
-$data modify storage dly:queue command_queue insert $(it) from storage temp:local new_command
+$data modify storage dly:queue command_queue insert $(next) from storage temp:local new_command

@@ -7,4 +7,3 @@ scoreboard players remove i dly.math 1
 execute if score i dly.math matches 0 run return 0
 execute store result storage temp:local iteration.next int 1 run scoreboard players remove i-1 dly.math 1
 function dly:queue_placement/searchloop with storage temp:local iteration
-#maybe can make more efficient in future with append and checking for successes in reading nonexistent data?

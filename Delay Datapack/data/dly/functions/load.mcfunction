@@ -4,8 +4,10 @@ scoreboard objectives add dly.constants dummy
 scoreboard objectives add dly.math dummy
 scoreboard objectives add dly.api dummy
 
-scoreboard players set #0 dly.constants 0
-scoreboard players set #1 dly.constants 1
+scoreboard players set #00 dly.constants 00
+scoreboard players set #01 dly.constants 01
+scoreboard players set #10 dly.constants 10
+scoreboard players set #11 dly.constants 11
 scoreboard players set #256 dly.constants 256
 
 execute store result score next_cmd delaycmd run data get storage dly:queue command_queue[0].when_to_run
