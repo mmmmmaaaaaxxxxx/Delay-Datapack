@@ -7,8 +7,6 @@ execute store result storage temp:local new_command.when_to_run int 1 run scoreb
 #This is the only way I could find to get the dimension context without hardcoding. it hopes that someone is in that dimension
 data modify storage temp:local new_command.dimension set from entity @p Dimension
 
-scoreboard players add queue_length delaycmd 1
-
 #now that I have the command object, I need to put it at the correct place in the queue
 #when this loop stops, i should be the index where the new command goes in the queue
 scoreboard players set keep_going dly.math 1
@@ -18,3 +16,5 @@ execute if data storage dly:queue command_queue[0] run function dly:queue_placem
 function dly:queue_placement/insert with storage temp:local iteration
 #incase this is the soonest command
 execute store result score next_cmd delaycmd run data get storage dly:queue command_queue[0].when_to_run
+
+scoreboard players add queue_length delaycmd 1
